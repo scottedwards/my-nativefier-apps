@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+RED='\033[0;31m'
+CYAN='\033[1;36m'
+NC='\033[0m' # No Color
+
+nativefier_dir='/home/scottedwardscoll/Nativefier Apps'
+
+app_folder_suffix='-linux-x64';
+template_desktop='Template.desktop';
+desktop_shortcut_dir='desktop_shortcuts';
+
+app_shortcut_dir='/home/scottedwardscoll/.local/share/applications';
+
+title_bar='=========================';
+
+echo -e "$CYAN$title_bar Uninstall Nativefier Apps $title_bar$NC"
+
+app_names=($(ls "$nativefier_dir/$desktop_shortcut_dir/" | sed 's/\.desktop//'))
+num_apps=$(echo $app_names | wc -w)
+
+for (( i=1; i<=$num_apps; i++)) do
+	name=$app_names[i];
+	echo -e " $CYAN$name$NC";
+	echo "   Removing shortcut '$app_shortcut_dir/$name.desktop'...";
+	rm "$app_shortcut_dir/$name.desktop" 2> /dev/null;
+	rm "$nativefier_dir/$desktop_shortcut_dir/$name.desktop" 2> /dev/null;
+	echo "   Deleting app...";
+	rm -rf "$nativefier_dir/$name$app_folder_suffix";
+	echo '   Done!';
+done
+
+echo -e 'All apps removed!';
