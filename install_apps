@@ -4,13 +4,13 @@ RED='\033[0;31m'
 CYAN='\033[1;36m'
 NC='\033[0m' # No Color
 
-title_bar='=========================';
+title_bar='====================';
 
 num_of_apps=7
 
-native_dir='/home/scottedwardscoll/Nativefier Apps'
+native_dir="$HOME/Nativefier Apps"
 app_suffix='-linux-x64'
-application_shortcut_dir='/home/scottedwardscoll/.local/share/applications'
+app_shortcut_dir="$HOME/.local/share/applications"
 
 
 app_names=(
@@ -82,7 +82,7 @@ for (( i=1; i<=$num_of_apps; i++ )) do
 
 	# create a soft link to this desktop file in /home/scottedwardscoll/.local/share/applications
 	echo '   Creating application shortcut...'
-	ln -s "$desktop_file" "$application_shortcut_dir/$name.desktop"
+	ln -s "$desktop_file" "$app_shortcut_dir/$name.desktop"
 
 	echo '   Done!'
 done
