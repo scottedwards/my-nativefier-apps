@@ -79,6 +79,7 @@ for (( i=1; i<=$num_of_apps; i++ )) do
 	sed -i "s/<NAME>/$name/g" $desktop_file
 	sed -i "s/<COMMENT>/$comment/g" $desktop_file
 	sed -i "s/<CATEGORIES>/$categories/g" $desktop_file
+	sed -i "s/<NATIVE_DIR>/$native_dir/g" $desktop_file
 
 	# create a soft link to this desktop file in /home/scottedwardscoll/.local/share/applications
 	echo '   Creating application shortcut...'

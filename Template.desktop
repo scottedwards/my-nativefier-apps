@@ -8,9 +8,9 @@ Name=<NAME>
 
 Comment=<COMMENT>
 
-Exec="/home/scottedwardscoll/Nativefier Apps/<NAME>-linux-x64/<NAME>"
+Exec="<NATIVE_DIR>/<NAME>-linux-x64/<NAME>"
 
-Icon=/home/scottedwardscoll/Nativefier Apps/icons/<NAME>.png
+Icon=<NATIVE_DIR>/icons/<NAME>.png
 
 Terminal=false
 
