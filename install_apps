@@ -6,7 +6,7 @@ NC='\033[0m' # No Color
 
 title_bar='====================';
 
-num_of_apps=7
+num_of_apps=6
 
 native_dir="$HOME/Nativefier Apps"
 app_suffix='-linux-x64'
@@ -14,7 +14,6 @@ app_shortcut_dir="$HOME/.local/share/applications"
 
 
 app_names=(
-	"Calendar"
 	"Photos"
 	"Notes"
 	"Reminders"
@@ -24,7 +23,6 @@ app_names=(
 )
 
 app_urls=(
-	"https://www.icloud.com/calendar/"
 	"https://www.icloud.com/photos/"
 	"https://www.icloud.com/notes/"
 	"https://www.icloud.com/reminders/"
@@ -34,7 +32,6 @@ app_urls=(
 )
 
 app_comments=(
-	"Apple Calendar Web App"
 	"Apple Photos Web App"
 	"Apple Notes Web App"
 	"Apple Reminders Web App"
@@ -45,7 +42,6 @@ app_comments=(
 
 # make sure every category is followed by a ';' (no spaces!)
 app_categories=(
-	"calendar;events;schedule"
 	"photos;pictures;albums"
 	"notes;lists"
 	"reminders;todo"
